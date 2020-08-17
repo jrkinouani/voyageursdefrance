@@ -1,6 +1,48 @@
 <div class="container">
   <div class="text-center">
-    <h1>StaticPages#home</h1>
-    <p>Find me in app/views/static_pages/home.html.erb</p>
+    <p id="notice"><%= notice %></p>
+
+    <h1>Villes</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Region</th>
+          <th>Place</th>
+          <th>Air</th>
+          <th>Security</th>
+          <th>Food</th>
+          <th>Weather</th>
+          <th>Moving</th>
+          <th>Covid</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+        <% @cities.each do |city| %>
+          <tr>
+            <td><%= city.name %></td>
+            <td><%= city.region %></td>
+            <td><%= city.place %></td>
+            <td><%= city.air %></td>
+            <td><%= city.security %></td>
+            <td><%= city.food %></td>
+            <td><%= city.weather %></td>
+            <td><%= city.moving %></td>
+            <td><%= city.covid %></td>
+            <td><%= city.score = city.covid.to_i + city.food.to_i + city.air.to_i + city.security.to_i + city.weather.to_i + city.moving.to_i %></td>
+
+            <td><%= link_to 'Show', city %></td>
+            <!--<td><%= link_to 'Edit', edit_city_path(city) %></td>
+            <td><%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <br>
   </div>
 </div>

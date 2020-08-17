@@ -4,14 +4,13 @@ class CitiesController < ApplicationController
   # GET /cities
   # GET /cities.json
   def index
-    @cities = City.all
+    #@cities = City.all.sort(:score)
+      @cities = City.all.sort_by { |city| - city[:covid] }
   end
 
   # GET /cities/1
   # GET /cities/1.json
   def show
-    @score = @city.covid.to_i + @city.food.to_i + @city.moving.to_i +
-    @city.security.to_i + @city.weather.to_i + @city.air.to_i
    end
 
   # GET /cities/new

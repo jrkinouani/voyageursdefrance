@@ -1,9 +1,18 @@
 <div class="container">
+<div class="row">
   <div class="text-center">
-    <p id="notice"><%= notice %></p>
+    <h1 class="proposition">Explorez la Fance</h1>
+    <h2 class="baseline">Choisissez vos vacances en france selon vos critères</h2>
+  </div>
+  <div class="col-md-4">
+    <h2>Filtres</h2>
+  <%= link_to "covid", search_page_path{ :covid }
+ %>
 
+  </div>
+  <div class="col-md-8">
+  <div class="text-center">
     <h1>Villes</h1>
-
     <table>
       <thead>
         <tr>
@@ -21,7 +30,6 @@
       </thead>
 
       <tbody>
-
         <% @cities.each do |city| %>
           <tr>
             <td><%= city.name %></td>
@@ -34,15 +42,14 @@
             <td><%= city.moving %></td>
             <td><%= city.covid %></td>
             <td><%= city.score = city.covid.to_i + city.food.to_i + city.air.to_i + city.security.to_i + city.weather.to_i + city.moving.to_i %></td>
-
-            <td><%= link_to 'Show', city %></td>
+            <td><%= link_to 'Voir', city %></td>
             <!--<td><%= link_to 'Edit', edit_city_path(city) %></td>
             <td><%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
           </tr>
         <% end %>
       </tbody>
     </table>
-
-    <br>
   </div>
+  </div>
+ </div>
 </div>

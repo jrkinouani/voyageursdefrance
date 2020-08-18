@@ -6,8 +6,23 @@
   </div>
   <div class="col-md-4">
     <h2>Filtres</h2>
-  <%= link_to "covid", search_page_path{ :covid }
- %>
+    <ul>
+      <li>
+          <%= link_to "covid", covid_path %>
+      </li>
+      <li>
+          <%= link_to "Air", air_path %>
+      </li>
+      <li>
+          <%= link_to "Sécurité", securite_path %>
+      </li>
+      <li>
+          <%= link_to "Restauration", restauration_path %>
+      </li>
+      <li>
+          <%= link_to "Météo", meteo_path %>
+      </li>
+    </ul>
 
   </div>
   <div class="col-md-8">

@@ -19,4 +19,24 @@ class StaticPagesController < ApplicationController
   def faq
   end
 
+  def covid
+    @cities = City.all.sort_by { |city| - city[:covid] }
+  end
+
+  def air
+    @cities = City.all.sort_by { |city| - city[:air] }
+  end
+
+  def restauration
+    @cities = City.all.sort_by { |city| - city[:food] }
+  end
+
+  def security
+    @cities = City.all.sort_by { |city| - city[:security] }
+  end
+
+  def meteo
+    @cities = City.all.sort_by { |city| - city[:weather] }
+  end
+
 end

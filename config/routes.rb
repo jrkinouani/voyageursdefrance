@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   get '/meteo' => 'static_pages#meteo'
   get '/securite' => 'static_pages#security'
   get '/restauration' => 'static_pages#restauration'
-
+  get '/fun' => 'static_pages#fun'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

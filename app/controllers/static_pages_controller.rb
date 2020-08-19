@@ -39,4 +39,9 @@ class StaticPagesController < ApplicationController
     @cities = City.all.sort_by { |city| - city[:weather] }
   end
 
+  def fun
+    @cities = City.all.sort_by { |city| - city[:fun] }
+
+  end
+
 end

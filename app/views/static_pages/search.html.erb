@@ -8,6 +8,7 @@
 
             <% else %>
               <h3 class="title_reunion">Voici le résultat pour <%= params[:search] %></h3>
+
           <% end %>
             <h1>Cities</h1>
             <table>
@@ -22,31 +23,32 @@
                   <th>Weather</th>
                   <th>Moving</th>
                   <th>Covid</th>
-                  <th>Fun</th>
                   <th>Score</th>
                 </tr>
               </thead>
-          <tbody>
-            <% @cities.each do |city| %>
-              <tr>
-                <td><%= city.name %></td>
-                <td><%= city.region %></td>
-                <td><%= city.place %></td>
-                <td><%= city.air %></td>
-                <td><%= city.security %></td>
-                <td><%= city.food %></td>
-                <td><%= city.weather %></td>
-                <td><%= city.moving %></td>
-                <td><%= city.covid %></td>
-                <td><%= city.fun %></td>
-                <td><%= city.score = city.covid.to_i + city.food.to_i + city.air.to_i + city.security.to_i + city.weather.to_i + city.moving.to_i + city.fun.to_i %></td>
 
-                <td><%= link_to 'Show', city %></td>
-                <td><%= link_to 'Edit', edit_city_path(city) %></td>
-                <td><%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-              </tr>
-            <% end %>
-            </tbody>
+              <tbody>
+
+                <% @cities.each do |city| %>
+                  <tr>
+                    <td><%= city.name %></td>
+                    <td><%= city.region %></td>
+                    <td><%= city.place %></td>
+                    <td><%= city.air %></td>
+                    <td><%= city.security %></td>
+                    <td><%= city.food %></td>
+                    <td><%= city.weather %></td>
+                    <td><%= city.moving %></td>
+                    <td><%= city.covid %></td>
+                    <td><%= city.score = city.covid.to_i + city.food.to_i + city.air.to_i + city.security.to_i + city.weather.to_i + city.moving.to_i + city.fun.to_i%></td>
+
+                    <!--<td><%= link_to 'Show', city %></td>
+                    <td><%= link_to 'Edit', edit_city_path(city) %></td>
+                    <td><%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
           </div>
     </div>
   </div>

@@ -15,7 +15,7 @@
     <ul class="nav navbar-nav navbar-right">
       <%= form_tag(search_page_path, method: "get", class: "search-discover js-form-search-location search-discover--hero", role: "form") do %>
              <div class="search-discover__inner">
-               <%= text_field_tag :search, params[:search], class:"search-discover__input-location js-location", placeholder: "Chercher une ville" %>
+               <%= text_field_tag :search, params[:search], class:"search-discover__input-location js-location", placeholder: "Rechercher une ville" %>
                <button type="submit" class="btn btn-danger btn-lg" data-ga-category="Home" data-ga-action="Search">
                  <i class="fa fa-search visible-xs"></i>
                  <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-search" fill="currentColor" xmlns="http://www.w3.org/2000/svg">

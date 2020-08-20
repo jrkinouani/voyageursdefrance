@@ -11,6 +11,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'bootstrap', '~> 5.0.0.alpha1'
 gem 'jquery-rails'
+gem 'rmagick'
+gem 'carrierwave', '~> 2.0'
 
 
 group :development, :test do

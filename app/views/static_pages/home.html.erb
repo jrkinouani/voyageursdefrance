@@ -35,47 +35,30 @@
 
   </div>
   <div class="col-md-8">
-  <div class="text-center">
-    <h1>Villes</h1>
-    <table>
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Region</th>
-          <th>Place</th>
-          <th>Air</th>
-          <th>Security</th>
-          <th>Food</th>
-          <th>Weather</th>
-          <th>Moving</th>
-          <th>Covid</th>
-          <th>Fun</th>
-          <th>Score</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @cities.each do |city| %>
-          <tr>
-            <td><%= city.name %></td>
-            <td><%= city.region %></td>
-            <td><%= city.place %></td>
-            <td><%= city.air %></td>
-            <td><%= city.security %></td>
-            <td><%= city.food %></td>
-            <td><%= city.weather %></td>
-            <td><%= city.moving %></td>
-            <td><%= city.covid %></td>
-            <td><%= city.fun %></td>
-            <td><%= city.score = city.covid.to_i + city.food.to_i + city.air.to_i + city.security.to_i + city.weather.to_i + city.moving.to_i + city.fun.to_i %></td>
-            <td><%= link_to 'Voir', city %></td>
-            <!--<td><%= link_to 'Edit', edit_city_path(city) %></td>
-            <td><%= link_to 'Destroy', city, method: :delete, data: { confirm: 'Are you sure?' } %></td>-->
-          </tr>
+    <div class="text-center">
+      <h2>Villes</h2>
+    </div>
+    <div class="row">
+          <% @cities.each do |city| %>
+           <div class="col-lg-3  col-md-3 col-xs-12" id="row_book">
+            <div class="text-center">
+              <%= link_to (image_tag(city.image, class:"card-img-top")), root_path %>
+              <h5 class="book_title"><%= city.name %></h5>
+              <h5 class="book_title">Region : <%= city.region %></h5>
+              <h5 class="book_title">Endroit : <%= city.place %></h5>
+              <h5 class="book_title">Restauration : <%= city.food %></h5>
+              <h5 class="book_title">Qualité de l'air : <%= city.air %></h5>
+              <h5 class="book_title">Météo : <%= city.weather %></h5>
+              <h5 class="book_title">Transport : <%= city.moving %></h5>
+              <h5 class="book_title">Covid : <%= city.covid %></h5>
+              <h5 class="book_title">Fun : <%= city.fun %></h5>
+              <h5 class="book_title">Sécurité :   <%= city.security %></h5>
+              <h5 class="book_title">Score : <%= city.score = city.covid.to_i + city.food.to_i + city.air.to_i + city.security.to_i + city.weather.to_i + city.moving.to_i + city.fun.to_i %></h5>
+              <h5><%= link_to 'Voir', city %></h5>
+            </div>
+        </div>
         <% end %>
-      </tbody>
-    </table>
-  </div>
-  </div>
- </div>
+    </div>
+</div>
+</div>
 </div>

@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '~> 5.1.7'
-gem 'sqlite3'
 gem 'puma', '~> 3.7'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
@@ -20,6 +19,8 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
+  gem 'sqlite3'
+
 end
 
 group :development do
@@ -29,6 +30,11 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+end
+
+group :production do
+  gem 'pg', '0.18.4'
+  gem "rails_12factor"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

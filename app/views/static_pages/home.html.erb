@@ -10,7 +10,7 @@
 </div>
 <div class="container">
 <div class="row">
-  <div class="col-md-4">
+  <div class="col-md-2">
     <h2>Filtres</h2>
     <ul>
       <li>
@@ -34,11 +34,52 @@
     </ul>
 
   </div>
-  <div class="col-md-8">
+  <div class="col-md-10">
     <div class="text-center">
       <h2>Villes</h2>
     </div>
     <div class="row">
+                <!-- Team member -->
+                <% @cities.each do |city| %>
+
+                <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                        <div class="mainflip">
+                            <div class="frontside">
+                                <div class="card"><%= image_tag(city.image, class:"img-responsive") %>
+
+
+                                    <div class="card-body text-center">
+                                        <h4 class="card-title"><%= city.name %></h4>
+                                        <p class="card-text">Region : <%= city.region %></p>
+                                        <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="backside">
+                                <div class="card">
+                                    <div class="card-body text-center mt-4">
+                                      <h5 class="book_title">Restauration : <%= city.food %></h5>
+                                      <h5 class="book_title">Qualité de l'air : <%= city.air %></h5>
+                                      <h5 class="book_title">Météo : <%= city.weather %></h5>
+                                      <h5 class="book_title">Transport : <%= city.moving %></h5>
+                                      <h5 class="book_title">Covid : <%= city.covid %></h5>
+                                      <h5 class="book_title">Fun : <%= city.fun %></h5>
+                                      <h5 class="book_title">Sécurité :   <%= city.security %></h5>
+                                        <p class="card-text">
+                                          This is basic card with image on top, title, descriptio title, description</p>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <% end %>
+    </div>
+
+
+    <!--<div class="row">
           <% @cities.each do |city| %>
            <div class="col-lg-3  col-md-3 col-xs-12" id="row_book">
             <div class="text-center">
@@ -58,7 +99,7 @@
             </div>
         </div>
         <% end %>
-    </div>
+    </div>-->
 </div>
 </div>
 </div>

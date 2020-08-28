@@ -52,7 +52,6 @@
                                     <div class="card-body text-center">
                                         <h4 class="card-title"><%= city.name %></h4>
                                         <p class="card-text">Region : <%= city.region %></p>
-                                        <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -68,7 +67,7 @@
                                       <h5 class="book_title">Sécurité :   <%= city.security %></h5>
                                         <p class="card-text">
                                           This is basic card with image on top, title, descriptio title, description</p>
-
+                                          <%= button_to "voir plus", city ,:method => :post, class:"btn btn-primary btn-sm"   %>
                                     </div>
                                 </div>
                             </div>

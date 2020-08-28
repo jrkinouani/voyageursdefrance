@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   get '/securite' => 'static_pages#security'
   get '/restauration' => 'static_pages#restauration'
   get '/fun' => 'static_pages#fun'
+  post 'cities/:id' => 'cities#show'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

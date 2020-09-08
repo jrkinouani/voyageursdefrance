@@ -1,6 +1,8 @@
 class StaticPagesController < ApplicationController
+  
   def home
     @cities = City.all.sort_by { |city| - city[:score] }
+
 
   end
 
